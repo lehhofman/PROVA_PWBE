@@ -1,5 +1,3 @@
-# PROVA_PWBE
-
 ## Desafio
 
 Este é um desafio para desenvolver operações CRUD (Create, Read, Update, Delete) para diferentes entidades em um banco de dados. As funcionalidades a serem desenvolvidas incluem:

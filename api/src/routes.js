@@ -4,7 +4,7 @@ const routes = express.Router();
 const Cliente = require('./controllers/cliente');
 const Telefone = require('./controllers/telefone');
 const Veiculo = require('./controllers/veiculo');
-const Aluguel = require('./controllers/aluguel'); // Importe o controlador para Aluguel
+const Aluguel = require('./controllers/aluguel'); 
 
 routes.get('/', (req, res) => {
     res.json("aluguel");

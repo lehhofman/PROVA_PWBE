@@ -4,16 +4,16 @@ const con = require('../connection/mysql');
 
 const addTelefone = (req, res) => {
     
-    const { cpf_cliente, telefone } = req.body;
-    if (cpf_cliente && telefone) {
-        con.query('INSERT INTO Telefone (cpf_cliente, telefone) VALUES (?, ?)',
-            [cpf_cliente, telefone],
+    const { cpf, numero } = req.body;
+    if (cpf && numero) {
+        con.query('INSERT INTO Telefone (cpf, numero) VALUES (?, ?)',
+            [cpf, numero],
             (err, result) => {
                 if (err) {
                     console.error('Erro ao adicionar telefone:', err);
                     res.status(500).json({ error: 'Erro ao adicionar telefone' });
                 } else {
-                    const newPhone = { cpf_cliente, telefone };
+                    const newPhone = { cpf, numero };
                     res.status(201).json(newPhone);
                 }
             });
